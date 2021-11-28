@@ -4,15 +4,15 @@ const dodger = document.getElementById("dodger");
 document.addEventListener("keydown", function (e) {
 	if (e.key === "ArrowLeft") {
 		console.log("Key Pressed");
-		dodgerLeft();
+		moveDodgerLeft();
 	}
 	if (e.key === "ArrowRight") {
 		console.log("Key Pressed");
-		dodgerRight();
+		moveDodgerRight();
 	}
 });
 
-function dodgerLeft() {
+function moveDodgerLeft() {
 	const leftNumbers = dodger.style.left.replace("px", "");
 	const intLNumbers = parseInt(leftNumbers, 10);
 
@@ -20,7 +20,7 @@ function dodgerLeft() {
 		dodger.style.left = `${intLNumbers - 5}px`;
 	}
 }
-function dodgerRight() {
+function moveDodgerRight() {
 	const rightNumbers = dodger.style.left.replace("px", "");
 	const intLNumbers = parseInt(rightNumbers, 10);
 
